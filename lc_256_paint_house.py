@@ -40,3 +40,5 @@ class Solution:
         
         return min(minRedCost, minBlueCost, minGreenCost)
 
+# OPTIMAL: Faster than 100% of solutions
+
