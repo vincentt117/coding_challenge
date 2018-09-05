@@ -1,3 +1,5 @@
+# https://leetcode.com/problems/implement-queue-using-stacks/description/
+
 class MyQueue(object):
 
     def __init__(self):
@@ -58,7 +60,5 @@ class MyQueue(object):
 # param_2 = obj.pop()
 # param_3 = obj.peek()
 # param_4 = obj.empty()
-
-
 
 # Faster than ~98% of submissions
