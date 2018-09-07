@@ -20,3 +20,5 @@ class Solution(object):
                 matrix[m][j] = 0
     
 # Fast at 88ms & faster than 96% of accepted submissions
+
+# O(1) solution is store the final state of each row and column in the first row and column respectively
