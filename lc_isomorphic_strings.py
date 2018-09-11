@@ -22,5 +22,7 @@ def isIsomorphic(s, t):
             return False
     
     return True
+
+# Faster than ~34% of submissions
         
         
