@@ -1,4 +1,6 @@
-def myPow(self, x, n):
+# https://leetcode.com/problems/powx-n/description/
+
+def myPow(x, n):
     """
     :type x: float
     :type n: int
@@ -6,7 +8,7 @@ def myPow(self, x, n):
     """
     if n == 0:
         return 1
-    temp = self.myPow(x, int(n / 2))
+    temp = myPow(x, int(n / 2))
     if not n % 2:
         return temp * temp
     else:
@@ -14,3 +16,5 @@ def myPow(self, x, n):
             return x * temp * temp
         else:
             return temp * temp / x
+
+# Results: https://leetcode.com/submissions/detail/183421168/
