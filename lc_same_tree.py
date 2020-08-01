@@ -70,4 +70,14 @@ class Solution(object):
 
 
 # Solution found in discussion
+
+
+class Solution:
+    def isSameTree(self, p: TreeNode, q: TreeNode) -> bool:
+        if (not p and not q) or (p and q and p.val == q.val):
+            if not p and not q: return True
+            return self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right)
+        else:
+            return False
+# Solution from July 14, 2020
             

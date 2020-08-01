@@ -1,6 +1,6 @@
 # Add Binary
 
-# https://leetcode.com/explore/interview/card/facebook/5/round-1-phone-interview/263/
+# https://leetcode.com/problems/add-binary/
 
 # Given two binary strings, return their sum (also a binary string).
 
@@ -14,6 +14,23 @@
 
 # Input: a = "1010", b = "1011"
 # Output: "10101"
+
+
+# Solution from July 19, 2020
+class Solution:
+    def addBinary(self, a: str, b: str) -> str:
+        carry = 0 
+        sum_l = []
+        idx = -1 
+        while abs(idx) <= len(a) or abs(idx) <= len(b):
+            a_idx = int(a[idx]) if abs(idx) <= len(a) else None
+            b_idx = int(b[idx]) if abs(idx) <= len(b) else None
+            idx_sum = (a_idx if a_idx != None else 0) + (b_idx if b_idx != None else 0) + carry
+            sum_l.append(str(idx_sum % 2))
+            carry = idx_sum // 2
+            idx -= 1
+        if carry == 1: sum_l.append('1')
+        return ''.join(sum_l[::-1])
 
 class Solution(object):
     def addBinary(self, a, b):
@@ -49,4 +66,3 @@ class Solution(object):
             holdA = 0
             holdB = 0
         return(retString)        
-    

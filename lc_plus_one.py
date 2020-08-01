@@ -18,4 +18,14 @@ def plusOne(self, digits):
     return digits
 
 # Faster than 100% of submissions   
-    
+
+
+class Solution:
+    def plusOne(self, digits: List[int]) -> List[int]:
+        add = 1
+        for i in range(len(digits) - 1, -1, -1):
+            d_sum = digits[i] + add
+            digits[i] = d_sum % 10
+            add = d_sum // 10
+        return [1] + digits if add == 1 else digits
+            
